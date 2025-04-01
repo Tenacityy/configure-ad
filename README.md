@@ -31,9 +31,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 1) Let's create a Resource Group within Azure! Navigate to "Resource Groups" by typing it in the search bar.
 <p>
 <img src="https://i.imgur.com/x6ljaCc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/Tlllxlr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Tlllxlr.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 <p>
-We've successfully created a Resource Group!
 <p>
 <img src="https://i.imgur.com/MFe4ReH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -47,18 +46,104 @@ We've successfully created a Resource Group!
 <p>
 Make sure your Region is the same as your Resource Group.
 <p>
-<img src="https://i.imgur.com/QxXiKjU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/WF2GocN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/xD4zHSo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QxXiKjU.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WF2GocN.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/xD4zHSo.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+3) Next we will Create a Virtual Machine For our Domain Controller! Navigate to "Virtual Machines" by typing it in the search bar.
+<p>
+<img src="https://i.imgur.com/YPswrBy.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Make sure you select "Windows Server 2022 Datacenter" and also make sure the region is the same.
+<p>
+<img src="https://i.imgur.com/2dz2Q78.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Make sure you check these 2 lisencing boxes!
+<p>
+<img src="https://i.imgur.com/4MBlWTv.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RNZR0hv.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Make sure you select the correct Virtual Network!
+<p></p>
+<img src="https://i.imgur.com/lNiOS0j.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2wkqECP.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/s2KTy9d.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
+4) Let's Create another Virtual Machine name Client-1! Navigate to "Virtual Machines" by typing it in the search bar.
+<p>
+<img src="https://i.imgur.com/UMEPdws.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Make sure to select "Windows 10 Pro" and select the same region as the "dc-1" Virtual Machine
+<p>
+<img src="https://i.imgur.com/HtiLQIV.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Make sure to check this box!
+<p>
+<img src="https://i.imgur.com/USDDXxp.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mSpqsuN.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/r36Kf2P.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6hEM3np.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/twBg4n1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+</p>
+<br />
+5) Next let's set the Domain Controller’s NIC Private IP address to be static. Let's Navigate to "Virtual Machine" on Azure.
+<p></p>
+<img src="https://i.imgur.com/hAxxvSI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SMUDyFv.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mlxFywx.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/jYdhkxb.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8ME7SEk.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+</p>
+<br />
+6) For the sake of this tutorial let's disable the Windows Firewall inside of "dc-1" Virtual Machine for Testing Connectivity.
+<p></p>
+<img src="https://i.imgur.com/6gpuu0v.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ajAudPM.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+</p>
+<br />
+7) Next we will set Client-1’s DNS settings to DC-1’s Private IP address. Navigate to "dc-1" Virtual Machine in Azure.
+<p></p>
+<p>
+Copy the Private IP Address from "dc-1" to your clipboard.
+<p>
+<img src="https://i.imgur.com/S9hTfVo.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<p>
+Next we will Navigate to "client-1" Virtual Machine
+<p>
+<img src="https://i.imgur.com/oJBeKal.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/h1k2kQi.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Oaoa4Fp.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FXKgZaI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+</p>
+<br />
+8) Next let's login to "Client-1" Virtual Machine and attempt to ping "dc-1"
+<p></p>
+<p>
+Open up Windows Powershell and type "ping [INSERT PRIVATE IP]"
+<p>
+<img src="https://i.imgur.com/hAxxvSI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SMUDyFv.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mlxFywx.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/jYdhkxb.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8ME7SEk.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+</p>
+<br />
+
