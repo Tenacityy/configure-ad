@@ -137,11 +137,11 @@ Next we will Navigate to "client-1" Virtual Machine
 <p>
 Open up Windows Powershell and type "ping [INSERT PRIVATE IP]"
 <p>
-<img src="https://i.imgur.com/hAxxvSI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/SMUDyFv.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/mlxFywx.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/jYdhkxb.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/8ME7SEk.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cLGzOLu.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p> 
+Now we'll run "ipconfig /all" and look at our DNS Server Address
+<p>
+<img src="https://i.imgur.com/950afgY.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 </p>
