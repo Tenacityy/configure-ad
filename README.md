@@ -146,4 +146,11 @@ Now we'll run "ipconfig /all" and look at our DNS Server Address
 <p>
 </p>
 <br />
+9) Next we'll install Active Directory on our Domain Controller
+<p>
+<img src="https://i.imgur.com/USDDXxp.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mSpqsuN.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/r36Kf2P.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6hEM3np.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/twBg4n1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
