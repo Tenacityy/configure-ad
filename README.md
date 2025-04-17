@@ -21,9 +21,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Setup Virtual Machines Through Azure
-- Step 2
-- Step 3
-- Step 4
+- Configure IP Addresses and DNS settings
+- Deploy Active Directory
+- Setup Users and Groups
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -148,10 +148,60 @@ Now we'll run "ipconfig /all" and look at our DNS Server Address
 <br />
 9) Next we'll install Active Directory on our Domain Controller. Login to the domain controller, and navigate to our Server Manager.
 <p>
-<img src="https://i.imgur.com/USDDXxp.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/mSpqsuN.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/r36Kf2P.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/6hEM3np.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/twBg4n1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vW2dgUf.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/J2n6pBE.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6EbpZj5.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ThToi5H.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+Here we'll check "Active Directory Domain Services".
 <p></p>
+<img src="https://i.imgur.com/PQDwDF3.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DHvkuaU.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dexh7Uq.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gECeYNC.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HqNCS61.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Make sure you remember your "root domain name".
+<p></p>
+<img src="https://i.imgur.com/3wh7wcV.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/EDCyrmx.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/rXGJcQb.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/TclPTJe.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cJYcZcf.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VYkNxqf.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1wF1clC.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Next let's navigate to "Active Directory Users and Computers".
+<p></p>
+<img src="https://i.imgur.com/F4bHCOu.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Vwh1d8Z.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Let's create a Organizational Unit called "_EMPLOYEES". So we can organize and manage resources within a domain.
+<p></p>
+<img src="https://i.imgur.com/pFJhvou.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Let's create another Organizational Unit Called "_ADMINS"
+<p></p>
+<img src="https://i.imgur.com/t9Yxjn5.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7FkXaN8.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Let's create a "User". "Users" are objects that represent real people (or sometimes services) who need to access resources on a network.
+<p></p>
+<img src="https://i.imgur.com/xbCGTK0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/9JJOZXK.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7hnv8KA.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Next let's naviagte to our "Users" folder and Right click the user you just created then click "Properties".
+<img src="https://i.imgur.com/tO5oXiY.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/rPoTBnr.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Wxn434S.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p></p>
+Now we'll add this user to the Group labeled "Domain Admins". A Domain Admin has full administrative rights over the entire domain.
+<p></p>
+<img src="https://i.imgur.com/WL3HhNI.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<p>
+</p>
+<br />
+<p></p>
+THAT CONCLUDES THIS TUTORIAL ON HOW TO SETUP ACTIVE DIRECTORY THROUGH A AZURE VIRUAL MACHINE!
 
